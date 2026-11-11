@@ -1,6 +1,6 @@
 package fr.grandcinema.domain.reservation;
 
-import fr.grandcinema.catalogue.Place;
+import fr.grandcinema.domain.catalogue.Place;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

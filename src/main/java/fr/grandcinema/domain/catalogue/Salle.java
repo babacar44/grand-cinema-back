@@ -1,6 +1,5 @@
 package fr.grandcinema.domain.catalogue;
 
-import fr.grandcinema.catalogue.TypeSalle;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

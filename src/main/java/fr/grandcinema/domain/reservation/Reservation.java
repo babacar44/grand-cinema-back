@@ -1,9 +1,8 @@
 package fr.grandcinema.domain.reservation;
 
-import fr.grandcinema.catalogue.Seance;
-import fr.grandcinema.reservation.ReservationPlace;
-import fr.grandcinema.reservation.StatutReservation;
-import fr.grandcinema.utilisateur.Utilisateur;
+import fr.grandcinema.domain.catalogue.Seance;
+import fr.grandcinema.domain.utilisateur.Utilisateur;
+import fr.grandcinema.enumeration.StatutReservation;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

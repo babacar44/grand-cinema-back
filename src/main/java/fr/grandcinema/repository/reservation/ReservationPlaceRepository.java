@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import java.util.Collection;
 import java.util.List;
 
-public interface ReservationPlaceRepository extends JpaRepository<fr.grandcinema.repository.reservation.ReservationPlace, Long> {
+public interface ReservationPlaceRepository extends JpaRepository<ReservationPlace, Long> {
 
     /** Identifiants des places déjà prises pour une séance (plan de salle, US 16). */
     @Query("select rp.place.id from ReservationPlace rp where rp.seanceId = :seanceId")

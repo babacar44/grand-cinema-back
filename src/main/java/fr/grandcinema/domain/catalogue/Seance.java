@@ -1,6 +1,6 @@
 package fr.grandcinema.domain.catalogue;
 
-import fr.grandcinema.catalogue.VersionFilm;
+import fr.grandcinema.enumeration.VersionFilm;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
