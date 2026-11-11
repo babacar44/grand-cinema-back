@@ -14,4 +14,6 @@ public interface ReservationPlaceRepository extends JpaRepository<ReservationPla
     List<Long> findPlaceIdsOccupees(Long seanceId);
 
     boolean existsBySeanceIdAndPlaceIdIn(Long seanceId, Collection<Long> placeIds);
+
+    long countBySeanceId(Long seanceId);
 }

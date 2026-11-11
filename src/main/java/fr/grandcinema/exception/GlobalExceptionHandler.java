@@ -38,4 +38,15 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleIdentifiants() {
         return ProblemDetail.forStatusAndDetail(HttpStatus.UNAUTHORIZED, "Identifiants incorrects");
     }
+
+    @ExceptionHandler(RessourceIntrouvableException.class)
+    public ProblemDetail handleIntrouvable(RessourceIntrouvableException ex) {
+        return ProblemDetail.forStatusAndDetail(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    @ExceptionHandler(ConflitException.class)
+    public ProblemDetail handleConflit(ConflitException ex) {
+        return ProblemDetail.forStatusAndDetail(HttpStatus.CONFLICT, ex.getMessage());
+    }
+
 }
