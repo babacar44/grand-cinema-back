@@ -14,4 +14,6 @@ public interface ReservationRepository extends JpaRepository<Reservation, Long> 
 
     /** Réservations dont le blocage de 10 minutes est dépassé (libération des places). */
     List<Reservation> findByStatutAndDateExpirationBefore(StatutReservation statut, LocalDateTime date);
+
+    long countBySeanceId(Long seanceId);
 }
