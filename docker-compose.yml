@@ -1,0 +1,16 @@
+# Base PostgreSQL locale pour le développement : docker compose up -d
+services:
+  postgres:
+    image: postgres:16
+    container_name: grandcinema-db
+    environment:
+      POSTGRES_DB: grandcinema
+      POSTGRES_USER: grandcinema
+      POSTGRES_PASSWORD: grandcinema
+    ports:
+      - "5433:5432"
+    volumes:
+      - grandcinema-data:/var/lib/postgresql/data
+
+volumes:
+  grandcinema-data:
