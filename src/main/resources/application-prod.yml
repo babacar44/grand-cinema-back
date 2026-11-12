@@ -1,0 +1,23 @@
+# Toutes les valeurs sensibles viennent des variables d'environnement de Render.
+# Pas de valeur par défaut : si une variable manque, l'application ne démarre pas.
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 5        # offre gratuite : peu de connexions disponibles
+
+server:
+  port: ${PORT:8082}
+  forward-headers-strategy: framework   # Render est un proxy HTTPS devant l'application
+
+app:
+  jwt:
+    secret: ${JWT_SECRET}
+  cors:
+    allowed-origins: ${CORS_ORIGINS}
+
+logging:
+  level:
+    root: INFO

@@ -1,14 +1,11 @@
-#file: noinspection LossyEncoding
 spring:
   application:
     name: grand-cinema-backend
-  datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5433/grandcinema}
-    username: ${DB_USERNAME:grandcinema}
-    password: ${DB_PASSWORD:grandcinema}
+  profiles:
+    default: dev                  # sans indication, on est en développement
   jpa:
     hibernate:
-      ddl-auto: validate        # le sch�ma est g�r� par Flyway, Hibernate v�rifie seulement
+      ddl-auto: validate          # le schéma est géré par Flyway
     open-in-view: false
     properties:
       hibernate:
@@ -18,17 +15,11 @@ spring:
     enabled: true
     locations: classpath:db/migration
 
-server:
-  port: ${PORT:8082}            # Render fournit la variable PORT
-
 app:
   jwt:
-    secret: ${JWT_SECRET:dev-secret-a-changer-en-production-32-caracteres-minimum}
     expiration-minutes: 120
   reservation:
-    blocage-minutes: 10         # US 19 : dur�e du blocage des places
-  cors:
-    allowed-origins: ${CORS_ORIGINS:http://localhost:4200}
+    blocage-minutes: 10           # US 19
 
 springdoc:
   swagger-ui:
