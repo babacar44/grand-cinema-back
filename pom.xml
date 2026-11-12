@@ -10,7 +10,7 @@
     </parent>
     <groupId>fr.grand-cinema</groupId>
     <artifactId>grand-cinema</artifactId>
-    <version>1.1.0-SNAPSHOT</version>
+    <version>1.1.0</version>
     <name>grand-cinema-backend</name>
     <description>API de réservation de places – Le Grand Cinéma</description>
     <properties>
