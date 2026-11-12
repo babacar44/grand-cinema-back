@@ -10,7 +10,7 @@
     </parent>
     <groupId>fr.grand-cinema</groupId>
     <artifactId>grand-cinema</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>grand-cinema-backend</name>
     <description>API de réservation de places – Le Grand Cinéma</description>
     <properties>
@@ -18,6 +18,8 @@
         <springdoc.version>3.0.0</springdoc.version>
         <jjwt.version>0.12.6</jjwt.version>
         <jacoco.version>0.8.13</jacoco.version>
+        <sonar.organization>babacar44</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     <dependencies>
